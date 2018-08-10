@@ -1,0 +1,110 @@
+body {
+    background-size:cover;
+    
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 16px;
+    width: 100%;
+    color: aliceblue;
+}
+.card {
+    border: none;
+    background: none;
+    
+}
+#main {
+    display: flex;
+    align-items: center;
+    width: 26rem !important;
+    min-width: 100%;
+
+}
+h5 {
+    font-size: 40px;
+    text-align: center;
+}
+.degree> i {
+    font-size: 120px; 
+    padding: 16px;
+}
+.large {
+    font-size: 60px;
+}
+
+.small {
+    font-size: 30px;
+}
+.card-text {
+    text-align: center;
+    font-size: 24px;
+}
+.degree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.more-div {
+    display: flex;
+    flex-direction: row;
+    padding: 16px;
+}
+
+.day {
+    padding: 16px;
+}
+
+.day > p {
+    font-size: 20px;
+    font-weight: bold;
+}
+.day > i {
+    font-size: 60px;
+    padding-bottom: 16px;
+  
+}
+
+.day > .date {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+
+@media screen and (max-width: 500px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin-top: 16px;
+        width: 100%;
+        margin: 16px;
+    }
+
+    .more-div {
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+    }
+    
+    .day {
+        padding: 10px;
+    }
+    
+    .day > p {
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .day > i {
+        font-size: 40px;
+        padding-bottom: 10px;
+      
+    }
+    
+    .day > .date {
+        font-size: 10px;
+        font-weight: normal;
+    }
+}
