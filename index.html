@@ -1,74 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Weather App</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/weather-icons.css">
-    <link rel="stylesheet" href="css/weather-icons-wind.min.css">
-    <link rel="stylesheet" href="css/weather-icons.min.css">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Weather app</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="css/weather-icons-wind.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/weather-icons-wind.min.css">
+    <link rel="stylesheet" href="css/weather-icons.css">
+    <link rel="stylesheet" href="css/weather-icons.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="script.js"></script>
 </head>
-<body style="background-image: url('images/img3.jpg')">
+
+<body>
     <div class="container">
-        <div id="main" class="card" style="width: 18rem;">
-            <div class="card-body">
-                <div class="name">
-                    <h5 class="card-title">Chandigarh <i class="wi wi-direction-right"></i>
-                    </h5>
-                </div>
-              <div class="degree">
-              <i class="wi wi-thunderstorm"></i>
-                <div class="large">
-                        16<sup>&deg;</sup>
-                </div>
-                <div class="small">
-                    6<sup>&deg;</sup>
-                    22<sup>&deg;</sup>
-                </div>
+
+
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="City name" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <div class="input-group-append" onclick="getWeather()">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
             </div>
-            <div class="p">
-                    <p class="card-text">Scattered Thundershowers</p>
+        </div>
+        <div class="weather-info">
+            <div id="main" class="card" style="width: 18rem;">
+                <div class="card-body">
+
+                    <div class="name">
+                        <h5 class="card-title">Karachi
+
+                        </h5>
+                    </div>
+                    <div class="degree">
+                        <div class="icon">
+                            <div class="main-icon">
+
+                            </div>
+
+                        </div>
+
+                        <div class="current">
+                            <span></span>°
+                        </div>
+                        <div class="min">
+                            <span></span>°
+                            <div>
+                                <div class="max">
+                                    <span></span>°
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="description">
+                            <p class="card-text">
+
+                            </p>
+                        </div>
+<!-- forecast -->
+                        <div class="more-div">
+                            <div class="day-one">
+                                <p>Mon</p>
+                                <div id="icon">
+                                    <!-- <i class="wi wi-rain"></i> -->
+                                </div>
+                              
+                                <p class="temperature-one">36 C°</p>
+                                <p class="date-one">22/16</p>
+                            </div>
+                            <div class="day-two">
+                                <p>Tue</p>
+                                <div id="icon">
+                                    <!-- <i class="wi wi-storm-showers"></i> -->
+                                </div>
+                                <p class="temperature-two">36 C°</p>
+                                <p class="date-two">20/13</p>
+                            </div>
+                            <div class="day-three">
+                                <p>Wed</p>
+                                <div id="icon">
+                                    <!-- <i class="wi wi-snow-wind"></i> -->
+                                </div>
+                                
+                                <p class="temperature-three">36 C°</p>
+                                <p class="date-three">18/11</p>
+                            </div>
+                            <div class="day-four">
+                                <p>Thu</p>
+                                <div id="icon">
+                                        <!-- <i class="wi wi-cloud"></i> -->
+                                </div>
+                        
+                                <p class="temperature-four">36 C°</p>
+                                <p class="date-four">22/16</p>
+                            </div>
+                            <div class="day-five">
+                                <p>Fri</p>
+                                <div id="icon">
+                                        <!-- <i class="wi wi-day-sunny"></i> -->
+                                </div>
+                             
+                                <p class="temperature-five">36 C°</p>
+                                <p class="date-five">25/14</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- more dive -->
+
+
             </div>
-            <div class="more-div">
-                <div class="day">
-                    <p>Mon</p>
-                    <i class="wi wi-rain"></i>
-                    <p class="date">22/16</p>
-                </div>
-                 <div class="day">
-                    <p>Tue</p>
-                    <i class="wi wi-storm-showers"></i>
-                    <p class="date">20/13</p>
-                </div>
-                 <div class="day">
-                    <p>Wed</p>
-                    <i class="wi wi-snow-wind"></i>
-                    <p class="date">18/11</p>
-                </div>
-                 <div class="day">
-                    <p>Thu</p>
-                    <i class="wi wi-cloud"></i>
-                    <p class="date">22/16</p>
-                </div>
-                 <div class="day">
-                    <p>Fri</p>
-                    <i class="wi wi-day-sunny"></i>
-                    <p class="date">25/14</p>
-                </div>
-  
-            </div>
-            </div>
-          </div>
-          <!-- more dive -->
-          
-          
-    </div>
 </body>
+
 </html>

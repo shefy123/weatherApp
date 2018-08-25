@@ -1,5 +1,9 @@
-body {
+body ,html {
+    background-image: url('../images/img3.jpg');
     background-size:cover;
+    background-position: center;
+    height:100%;
+    width: 100%;
     
 }
 .container {
@@ -8,8 +12,14 @@ body {
     align-items: center;
     margin-top: 16px;
     width: 100%;
-    color: aliceblue;
+   color: aliceblue;
 }
+
+.weather-info {
+    display: none;
+}
+
+
 .card {
     border: none;
     background: none;
@@ -22,19 +32,24 @@ body {
     min-width: 100%;
 
 }
-h5 {
+.name {
     font-size: 40px;
     text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 .degree> i {
     font-size: 120px; 
     padding: 16px;
 }
-.large {
+.current {
     font-size: 60px;
 }
 
-.small {
+.min {
+    font-size: 30px;
+}
+.max {
     font-size: 30px;
 }
 .card-text {
@@ -47,21 +62,21 @@ h5 {
     align-items: center;
     
 }
-.more-div {
+.more-div  {
     display: flex;
     flex-direction: row;
     padding: 16px;
 }
 
-.day {
+.more-div > div {
     padding: 16px;
 }
 
-.day > p {
+.more-div > div, p {
     font-size: 20px;
     font-weight: bold;
 }
-.day > i {
+.more-div > div ,i {
     font-size: 60px;
     padding-bottom: 16px;
   
