@@ -5,7 +5,7 @@ function getWeather() {
     document.querySelector(".weather-info").style.display = "block";
     const cityName = document.querySelector("input").value;
     $.ajax({
-       url:`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=ed35504e69c121b6a8549eec1922f5ad&units=metric`,
+       url:`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=ed35504e69c121b6a8549eec1922f5ad&units=metric`,
        success: function (data) {
        console.log(data);
      
@@ -18,6 +18,10 @@ function getWeather() {
             }
             else if (icon === `Clouds`) {
                 document.querySelector(".main-icon").innerHTML='<i class="wi wi-cloud"></i>';
+            }
+
+            else if (icon === `rain`) {
+                document.querySelector(".main-icon").innerHTML='<i class="wi wi-night-rain-wind"></i>';
             }
             else  {
                 document.querySelector(".main-icon").innerHTML='no icon match';
@@ -51,11 +55,11 @@ function getWeather() {
         var d4 = new Date(data.list[26].dt*1000); 
         var d5 = new Date(data.list[30].dt*1000); 
  
-        document.querySelector(".day-one").innerHTML = days[d1.getDay()]; 
-        document.querySelector(".day-two").innerHTML = days[d2.getDay()];        
-        document.querySelector(".day-three").innerHTML = days[d3.getDay()];        
-        document.querySelector(".day-four").innerHTML = days[d4.getDay()];  
-        document.querySelector(".day-five").innerHTML = days[d5.getDay()]; 
+        // document.querySelector(".day-one").innerHTML = days[d1.getDay()]; 
+        // document.querySelector(".day-two").innerHTML = days[d2.getDay()];        
+        // document.querySelector(".day-three").innerHTML = days[d3.getDay()];        
+        // document.querySelector(".day-four").innerHTML = days[d4.getDay()];  
+        // document.querySelector(".day-five").innerHTML = days[d5.getDay()]; 
 
         document.querySelector(".date-one").innerHTML = `${months[d1.getMonth()]} ${d1.getDate()}`;        
         document.querySelector(".date-two").innerHTML = `${months[d2.getMonth()]} ${d2.getDate()}` ;        
