@@ -38,10 +38,12 @@ body ,html {
     letter-spacing: 3px;
     text-transform: uppercase;
 }
-.degree> i {
+.main-icon > i {
     font-size: 120px; 
     padding: 16px;
+  
 }
+
 .current {
     font-size: 60px;
 }
@@ -52,9 +54,9 @@ body ,html {
 .max {
     font-size: 30px;
 }
-.card-text {
+.description {
     text-align: center;
-    font-size: 24px;
+    font-size: 30px;
 }
 .degree {
     display: flex;
@@ -79,7 +81,7 @@ body ,html {
 .more-div > div ,i {
     font-size: 60px;
     padding-bottom: 16px;
-  
+    text-align: center;
 }
 
 .day > .date {
@@ -102,23 +104,25 @@ body ,html {
         display: flex;
         flex-direction: row;
         padding: 10px;
+        justify-content: center;
+        align-items: center;
     }
-    
-    .day {
+ 
+    .more-div > div {
         padding: 10px;
     }
     
-    .day > p {
+    .more-div > div, p {
         font-size: 16px;
         font-weight: bold;
     }
-    .day > i {
+    .more-div > div, i {
         font-size: 40px;
         padding-bottom: 10px;
       
     }
     
-    .day > .date {
+    .more-div > .date-one ,.date-two ,.date-three ,.date-four ,.date-five {
         font-size: 10px;
         font-weight: normal;
     }
