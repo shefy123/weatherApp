@@ -23,35 +23,33 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="script.js"></script>
+    <link rel="icon" type="image/jpg" href="images/weather-icon.jpg" sizes="32x32">
+
 </head>
 
-<body>
+<body onload="initialize()">
     <div class="container">
-
-
         <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="City name" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <input id="enter" type="text" class="form-control" placeholder="City name" aria-label="Recipient's username" aria-describedby="button-addon2">
             <div class="input-group-append" onclick="getWeather()">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+                <button id="enter-button" class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
             </div>
         </div>
+        <!-- weather info -->
         <div class="weather-info">
-            <div id="main" class="card" style="width: 18rem;">
-                <div class="card-body">
 
+            <div id="main" class="card">
+
+                <div class="card-body">
                     <div class="name">
                         <h5 class="card-title">Karachi
-
                         </h5>
                     </div>
                     <div class="degree">
                         <div class="icon">
                             <div class="main-icon">
-
                             </div>
-
                         </div>
-
                         <div class="current">
                             <span></span>°
                         </div>
@@ -60,7 +58,6 @@
                             <div>
                                 <div class="max">
                                     <span></span>°
-
                                 </div>
                             </div>
                         </div>
@@ -70,71 +67,76 @@
 
                             </p>
                         </div>
-<!-- forecast -->
-<div class="more-div">
-        <div class="day-one">
-            <p class="day1">
+                        <!-- forecast -->
+                        <div class="more-div">
+                            <div class="day-one">
+                                <p class="day1-of-week">
 
-            </p>
-    
-            <div id="icon">
-                <!-- <i class="wi wi-rain"></i> -->
-            </div>
-          
-            <p class="temperature-one">36 C°</p>
-            <p class="date-one">22/16</p>
-        </div>
-        <div class="day-two">
-                <p class="day2">
-                
-                </p>
-    
-            <div id="icon">
-                <!-- <i class="wi wi-storm-showers"></i> -->
-            </div>
-            <p class="temperature-two">36 C°</p>
-            <p class="date-two">20/13</p>
-        </div>
-        <div class="day-three">
-                <p class="day3">
-                
-                </p>
+                                </p>
 
-            <div id="icon">
-                <!-- <i class="wi wi-snow-wind"></i> -->
-            </div>
+                                <div id="icon">
+                          
+                                </div>
+
+                                <p class="temperature-one">36 C°</p>
+                                <p class="icon desc0">Sunny Weather</p>
+                                <p class="date-one">22/16</p>
+                            </div>
+                            <div class="day-two">
+                                <p class="day2-of-week">
+
+                                </p>
+
+                                <div id="icon1">
+                                 
+                                </div>
+                                <p class="temperature-two">36 C°</p>
+                                <p class="icon desc1">Sunny Weather</p>
+                                <p class="date-two">20/13</p>
+                            </div>
+                            <div class="day-three">
+                                <p class="day3-of-week">
+
+                                </p>
+
+                                <div id="icon2">
+
+                                </div>
+
+                                <p class="temperature-three">36 C°</p>
+                                <p class="icon desc2">Sunny Weather</p>
+                                <p class="date-three">18/11</p>
+                            </div>
+                            <div class="day-four">
+                                <p class="day4-of-week">
+
+                                </p>
+
+                                <div id="icon3">
+
+                                </div>
+
+                                <p class="temperature-four">36 C°</p>
+                                <p class="icon desc3">Sunny Weather</p>
+                                <p class="date-four">18/11</p>
+                            </div>
+                            <div class="day-five">
+                                <p class="day5-of-week">
+
+                                </p>
+
+                                <div id="icon4">
             
-            <p class="temperature-three">36 C°</p>
-            <p class="date-three">18/11</p>
-        </div>
-        <div class="day-four">
-                <p class="day4">
-                
-                </p>
+                                </div>
 
-            <div id="icon">
-                <!-- <i class="wi wi-snow-wind"></i> -->
-            </div>
-            
-            <p class="temperature-four">36 C°</p>
-            <p class="date-four">18/11</p>
-        </div>
-        <div class="day-five">
-                <p class="day5">
-                
-                </p>
+                                <p class="temperature-five">36 C°</p>
+                                <p class="icon desc4">Sunny Weather</p>
+                                <p class="date-five">25/14</p>
+                            </div>
 
-            <div id="icon">
-                    <!-- <i class="wi wi-day-sunny"></i> -->
-            </div>
-         
-            <p class="temperature-five">36 C°</p>
-            <p class="date-five">25/14</p>
-        </div>
-
-    </div>
-</div>
-</div>
+                        </div>
+                    </div>
+                </div>
 
 
             </div>

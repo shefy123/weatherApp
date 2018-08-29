@@ -19,16 +19,18 @@ body ,html {
     display: none;
 }
 
-
+.input-group-append {
+    margin-left: -1px;
+    height: calc(2.25rem + 2px);
+}
 .card {
     border: none;
-    background: none;
-    
+    background: none;    
 }
 #main {
     display: flex;
     align-items: center;
-    width: 26rem !important;
+    /* width: 26em !important; */
     min-width: 100%;
 
 }
@@ -80,10 +82,14 @@ body ,html {
 }
 .more-div > div ,i {
     font-size: 60px;
-    padding-bottom: 16px;
     text-align: center;
 }
-
+.desc0, .desc1, .desc2, .desc3, .desc4 {
+    font-weight: normal;
+}
+.day1, .day2, .day3, .day4, .day5 {
+    margin-bottom: 0px;
+}
 .day > .date {
     font-size: 20px;
     font-weight: normal;
@@ -91,6 +97,7 @@ body ,html {
 
 
 @media screen and (max-width: 500px) {
+ 
     .container {
         display: flex;
         flex-direction: column;
@@ -117,7 +124,7 @@ body ,html {
         font-weight: bold;
     }
     .more-div > div, i {
-        font-size: 40px;
+        font-size: 30px;
         padding-bottom: 10px;
       
     }
