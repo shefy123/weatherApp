@@ -1,10 +1,15 @@
 body ,html {
-    background-image: url('../images/img3.jpg');
-    background-size:cover;
-    background-position: center;
     height:100%;
     width: 100%;
     
+}
+
+body {
+    background-image: url('../images/img3.jpg');
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 .container {
     display: flex;
@@ -22,6 +27,9 @@ body ,html {
 .input-group-append {
     margin-left: -1px;
     height: calc(2.25rem + 2px);
+}
+#enter-button {
+    background-color: antiquewhite;
 }
 .card {
     border: none;
@@ -50,10 +58,10 @@ body ,html {
     font-size: 60px;
 }
 
-.min {
+.min, .min > i {
     font-size: 30px;
 }
-.max {
+.max, .max > i {
     font-size: 30px;
 }
 .description {
@@ -84,14 +92,11 @@ body ,html {
     font-size: 60px;
     text-align: center;
 }
-.desc0, .desc1, .desc2, .desc3, .desc4 {
-    font-weight: normal;
-}
+
 .day1, .day2, .day3, .day4, .day5 {
     margin-bottom: 0px;
 }
-.day > .date {
-    font-size: 20px;
+.week-days> div + p~p {
     font-weight: normal;
 }
 
@@ -104,15 +109,13 @@ body ,html {
         height: 100%;
         margin-top: 16px;
         width: 100%;
-        margin: 16px;
     }
 
     .more-div {
         display: flex;
-        flex-direction: row;
         padding: 10px;
         justify-content: center;
-        align-items: center;
+
     }
  
     .more-div > div {
@@ -120,17 +123,21 @@ body ,html {
     }
     
     .more-div > div, p {
-        font-size: 16px;
+        font-size: 10px;
         font-weight: bold;
     }
+
     .more-div > div, i {
         font-size: 30px;
         padding-bottom: 10px;
       
     }
+
     
-    .more-div > .date-one ,.date-two ,.date-three ,.date-four ,.date-five {
+    .more-div > .week-days {
         font-size: 10px;
         font-weight: normal;
+        height: 50px;
+        width: 50px;
     }
 }

@@ -1,5 +1,5 @@
 var days = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
-var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+var months = ["Jan","Feb","March","April","May","June","July","Aug","Sept","Oct","Nov","Dec"];
 
 // enter button function
 
@@ -97,11 +97,7 @@ function getWeather() {
         document.querySelector(".temperature-four").innerHTML = Math.round(data.list[21].main.temp) + " C°";         
         document.querySelector(".temperature-five").innerHTML = Math.round(data.list[29].main.temp) + " C°"; 
 
-        document.querySelector(".desc0").innerHTML = data.list[0].weather[0].description;        
-        document.querySelector(".desc1").innerHTML = data.list[8].weather[0].description;          
-        document.querySelector(".desc2").innerHTML = data.list[16].weather[0].description;         
-        document.querySelector(".desc3").innerHTML = data.list[24].weather[0].description;         
-        document.querySelector(".desc4").innerHTML = data.list[32].weather[0].description;        
+       
 
     // hdashdhad
 
@@ -141,7 +137,7 @@ function getWeather() {
             document.querySelector("#icon").innerHTML='<i class="wi wi-cloud"></i>';
         }
         // day 2
-        let moreIcon1 = data.list[8].weather[0].description;
+        let moreIcon1 = data.list[8].weather[0].main;
 
         if (moreIcon1 === `broken clouds`) {
             document.querySelector("#icon1").innerHTML='<i class="wi wi-night-cloudy-windy"></i>';
@@ -176,7 +172,7 @@ function getWeather() {
         }
         // 3day
 
-        let moreIcon2 = data.list[16].weather[0].description;
+        let moreIcon2 = data.list[16].weather[0].main;
 
         
         if (moreIcon2 === `broken clouds`) {
@@ -212,7 +208,7 @@ function getWeather() {
         }
         // 4day
 
-        let moreIcon3 = data.list[24].weather[0].description;
+        let moreIcon3 = data.list[24].weather[0].main;
 
         
         if (moreIcon3 === `broken clouds`) {
@@ -248,7 +244,7 @@ function getWeather() {
         }
         // 5day 
 
-        let moreIcon4 = data.list[32].weather[0].description;
+        let moreIcon4 = data.list[32].weather[0].main;
 
         
         if (moreIcon4 === `broken clouds`) {
