@@ -105,15 +105,15 @@ function getWeather() {
         let moreIcon = data.list[0].weather[0].main;
 
         
-        if (moreIcon === `broken clouds`) {
-            document.querySelector("#icon").innerHTML='<i class="wi wi-night-cloudy-windy"></i>';
+        if (moreIcon === `Wind`) {
+            document.querySelector("#icon").innerHTML='<i class="wi wi-windWind"></i>';
      
         }
         else if (moreIcon === `Clear`) {
             document.querySelector("#icon").innerHTML='<i class="wi wi-night-clear"></i>';
         }
-        else if (moreIcon === `Overcast clouds`) {
-            document.querySelector("#icon").innerHTML='<i class="wi wi-cloudy"></i>';
+        else if (moreIcon === `Snow`) {
+            document.querySelector("#icon").innerHTML='<i class="wi wi-night-snow-wind"></i>';
         }
         else if (moreIcon === `Clouds`) {
             document.querySelector("#icon").innerHTML='<i class="wi wi-cloud"></i>';
@@ -139,15 +139,15 @@ function getWeather() {
         // day 2
         let moreIcon1 = data.list[8].weather[0].main;
 
-        if (moreIcon1 === `broken clouds`) {
-            document.querySelector("#icon1").innerHTML='<i class="wi wi-night-cloudy-windy"></i>';
+        if (moreIcon1 === `Wind`) {
+            document.querySelector("#icon1").innerHTML='<i class="wi wi-windy"></i>';
      
         }
         else if (moreIcon1 === `clear sky`) {
             document.querySelector("#icon1").innerHTML='<i class="wi wi-night-clear"></i>';
         }
-        else if (moreIcon === `Overcast clouds`) {
-            document.querySelector("#icon").innerHTML='<i class="wi wi-cloudy"></i>';
+        else if (moreIcon === `Snow`) {
+            document.querySelector("#icon").innerHTML='<i class="wi wi-night-snow-wind"></i>';
         }
         else if (moreIcon1 === `Clouds`) {
             document.querySelector("#icon1").innerHTML='<i class="wi wi-cloud"></i>';
@@ -175,15 +175,15 @@ function getWeather() {
         let moreIcon2 = data.list[16].weather[0].main;
 
         
-        if (moreIcon2 === `broken clouds`) {
-            document.querySelector("#icon").innerHTML='<i class="wi wi-night-cloudy-windy"></i>';
+        if (moreIcon2 === `Wind`) {
+            document.querySelector("#icon").innerHTML='<i class="wi wi-windy"></i>';
      
         }
         else if (moreIcon2 === `clear sky`) {
             document.querySelector("#icon2").innerHTML='<i class="wi wi-night-clear"></i>';
         }
-        else if (moreIcon === `overcast clouds`) {
-            document.querySelector("#icon").innerHTML='<i class="wi wi-cloudy"></i>';
+        else if (moreIcon === `Snow`) {
+            document.querySelector("#icon").innerHTML='<i class="wi wi-night-snow-wind"></i>';
         }
         else if (moreIcon2 === `Clouds`) {
             document.querySelector("#icon2").innerHTML='<i class="wi wi-cloud"></i>';
@@ -211,13 +211,13 @@ function getWeather() {
         let moreIcon3 = data.list[24].weather[0].main;
 
         
-        if (moreIcon3 === `broken clouds`) {
-            document.querySelector("#icon3").innerHTML='<i class="wi wi-night-cloudy-windy"></i>';
+        if (moreIcon3 === `Wind`) {
+            document.querySelector("#icon3").innerHTML='<i class="wi "></i>';
      
         }
        
-        else if (moreIcon === `overcast clouds`) {
-            document.querySelector("#icon").innerHTML='<i class="wi wi-cloudy"></i>';
+        else if (moreIcon === `Snow`) {
+            document.querySelector("#icon").innerHTML='<i class="wi wi-night-snow-wind"></i>';
         }
         else if (moreIcon3 === `Clouds`) {
             document.querySelector("#icon3").innerHTML='<i class="wi wi-cloud"></i>';
@@ -245,12 +245,12 @@ function getWeather() {
         let moreIcon4 = data.list[32].weather[0].main;
 
         
-        if (moreIcon4 === `broken clouds`) {
-            document.querySelector("#icon4").innerHTML='<i class="wi wi-night-cloudy-windy"></i>';
+        if (moreIcon4 === `Wind`) {
+            document.querySelector("#icon4").innerHTML='<i class="wi wi-windy"></i>';
      
         }
-        else if (moreIcon === `overcast clouds`) {
-            document.querySelector("#icon").innerHTML='<i class="wi wi-cloudy"></i>';
+        else if (moreIcon === `Snow`) {
+            document.querySelector("#icon").innerHTML='<i class="wi wi-night-snow-wind"></i>';
         }
         else if (moreIcon4 === `clear sky`) {
             document.querySelector("#icon4").innerHTML='<i class="wi wi-night-clear"></i>';
