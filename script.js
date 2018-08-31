@@ -99,7 +99,7 @@ function getWeather() {
 
        
 
-    // hdashdhad
+    // icons
 
     
         let moreIcon = data.list[0].weather[0].main;
@@ -109,7 +109,7 @@ function getWeather() {
             document.querySelector("#icon").innerHTML='<i class="wi wi-night-cloudy-windy"></i>';
      
         }
-        else if (moreIcon === `clear sky`) {
+        else if (moreIcon === `Clear`) {
             document.querySelector("#icon").innerHTML='<i class="wi wi-night-clear"></i>';
         }
         else if (moreIcon === `Overcast clouds`) {
@@ -215,16 +215,14 @@ function getWeather() {
             document.querySelector("#icon3").innerHTML='<i class="wi wi-night-cloudy-windy"></i>';
      
         }
-        else if (moreIcon3 === `clear sky`) {
-            document.querySelector("#icon3").innerHTML='<i class="wi wi-night-clear"></i>';
-        }
+       
         else if (moreIcon === `overcast clouds`) {
             document.querySelector("#icon").innerHTML='<i class="wi wi-cloudy"></i>';
         }
         else if (moreIcon3 === `Clouds`) {
             document.querySelector("#icon3").innerHTML='<i class="wi wi-cloud"></i>';
         }
-        else if (moreIcon3 === `light rain`) {
+        else if (moreIcon3 === `Rain`) {
             document.querySelector("#icon3").innerHTML='<i class="wi wi-night-rain-wind"></i>';
         }
         else if (moreIcon3 === `Dust`) {
