@@ -1,15 +1,45 @@
-body ,html {
+html {
+    height:100%;
+    width: 100%;
+    
+}
+body {
     height:100%;
     width: 100%;
     
 }
 
 body {
-    background-image: url('../images/img3.jpg');
+    background-image: url('../images/main.jpg');
     background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    font-family: 'Cuprum', sans-serif;
+}
+.fab {
+    float: left;
+    font-size: 60px;
+    color:gainsboro;
+    margin-left: 20px;
+    margin-top: 16px;
+    transition: transform .2s;
+}
+
+.fab:hover {
+    transform: scale(1.5);
+}
+
+.heading ,#mainHeading >h1 {
+    text-align: center;
+    color: white;
+}
+.heading p {
+    font-size: 60px;
+}
+h1 {
+    font-size: 80px;
+    margin: 16px;
 }
 .container {
     display: flex;
@@ -17,7 +47,6 @@ body {
     align-items: center;
     margin-top: 16px;
     width: 100%;
-   color: aliceblue;
 }
 
 .weather-info {
@@ -35,6 +64,9 @@ body {
     border: none;
     background: none;    
 }
+.card-body {
+    padding: 0px;
+}
 #main {
     display: flex;
     align-items: center;
@@ -49,8 +81,6 @@ body {
 }
 .main-icon > i {
     font-size: 120px; 
-    padding: 16px;
-  
 }
 
 .current {
@@ -76,7 +106,6 @@ body {
 .more-div  {
     display: flex;
     flex-direction: row;
-    padding: 16px;
 }
 
 .more-div > div {
@@ -95,13 +124,28 @@ body {
 .day1, .day2, .day3, .day4, .day5 {
     margin-bottom: 0px;
 }
+.week-days {
+ 
+}
 .week-days> div + p~p {
     font-weight: normal;
 }
-
+.week-days >p {
+    margin-bottom: 0px;
+}
 
 @media screen and (max-width: 500px) {
- 
+   
+    .heading p {
+        font-size: 20px;
+    }
+    .heading {
+        margin:16px;
+        padding:16px;
+    }
+    h1 {
+        font-size: 40px;
+    }
     .container {
         display: flex;
         flex-direction: column;
